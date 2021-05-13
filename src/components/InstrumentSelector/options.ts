@@ -1,5 +1,5 @@
-import { InstrumentName } from 'soundfont-player';
-import instruments from 'soundfont-player/names/musyngkite.json';
+import { InstrumentName } from "soundfont-player";
+import instruments from "soundfont-player/names/musyngkite.json";
 
 interface Option {
   value: InstrumentName;
@@ -10,9 +10,9 @@ type OptionsList = Option[];
 type InstrumentList = InstrumentName[];
 
 function normalizeList(list: InstrumentList): OptionsList {
-  return list.map(instrument => ({
+  return list.map((instrument) => ({
     value: instrument,
-    label: instrument.replace(/_/gi, ' '),
+    label: instrument.replace(/_/gi, " "),
   }));
 }
 

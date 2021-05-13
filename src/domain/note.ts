@@ -36,7 +36,7 @@ export const PITCHES_REGISTRY: Record<PitchIndex, NotePitch> = {
   8: "G",
   9: "A",
   10: "A",
-  11: "B"
+  11: "B",
 };
 
 export function fromMidi(midi: MidiValue): Note {
@@ -60,7 +60,7 @@ interface NotesGeneratorSettings {
 
 export function generateNotes({
   fromNote = LOWER_NOTE,
-  toNote = HIGHER_NOTE
+  toNote = HIGHER_NOTE,
 }: NotesGeneratorSettings = {}): Note[] {
   return Array(toNote - fromNote + 1)
     .fill(0)

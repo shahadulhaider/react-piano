@@ -1,5 +1,5 @@
-import { Key as KeyLabel } from '../domain/keyboard';
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
+import { Key as KeyLabel } from "../domain/keyboard";
 
 type IsPressed = boolean;
 type EventCode = string;
@@ -12,7 +12,7 @@ interface Settings {
 
 function fromEventCode(code: EventCode): KeyLabel {
   const prefixRegex = /Key|Digit/gi;
-  return code.replace(prefixRegex, '');
+  return code.replace(prefixRegex, "");
 }
 
 function equal(watchedKey: KeyLabel, eventCode: EventCode): boolean {
@@ -43,12 +43,12 @@ export function usePressObserver({
       onFinishPress();
     }
 
-    document.addEventListener('keydown', handlePressStart);
-    document.addEventListener('keyup', handlePressFinish);
+    document.addEventListener("keydown", handlePressStart);
+    document.addEventListener("keyup", handlePressFinish);
 
     return () => {
-      document.removeEventListener('keydown', handlePressStart);
-      document.removeEventListener('keyup', handlePressFinish);
+      document.removeEventListener("keydown", handlePressStart);
+      document.removeEventListener("keyup", handlePressFinish);
     };
   }, [watchKey, pressed, setPressed, onStartPress, onFinishPress]);
 

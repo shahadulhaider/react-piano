@@ -1,8 +1,10 @@
-import React, { FunctionComponent } from 'react';
-import { OctavesRange, selectKey } from '../../domain/keyboard';
-import { notes, MidiValue } from '../../domain/note';
-import { Key } from '../Key';
-import './style.css';
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
+import React, { FunctionComponent } from "react";
+import { OctavesRange, selectKey } from "../../domain/keyboard";
+import { notes, MidiValue } from "../../domain/note";
+import { Key } from "../Key";
+import "./style.css";
 
 export interface KeyboardProps {
   loading: boolean;

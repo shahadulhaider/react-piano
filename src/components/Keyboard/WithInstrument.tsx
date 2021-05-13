@@ -1,9 +1,10 @@
-import React, { FunctionComponent, useEffect } from 'react';
-import { useSoundfont } from '../../adaters/Soundfont';
-import { useAudioContext } from '../../hooks/useAudioContext';
-import { useInstrument } from '../../state/Instrument';
-import { Keyboard } from '../Keyboard';
-import './style.css';
+/* eslint-disable import/no-cycle */
+import React, { FunctionComponent, useEffect } from "react";
+import { useSoundfont } from "../../adaters/Soundfont";
+import { useAudioContext } from "../../hooks/useAudioContext";
+import { useInstrument } from "../../state/Instrument";
+import { Keyboard } from ".";
+import "./style.css";
 
 export const KeyboardWithInstrument: FunctionComponent = () => {
   const AudioContext = useAudioContext()!;

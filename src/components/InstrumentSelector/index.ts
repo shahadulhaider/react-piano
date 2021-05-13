@@ -1,1 +1,1 @@
-export * from './InstrumentSelector';
+export * from "./InstrumentSelector";

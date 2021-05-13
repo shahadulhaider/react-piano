@@ -1,8 +1,9 @@
-import React, { FunctionComponent, ReactEventHandler } from 'react';
-import clsx from 'clsx';
-import { NoteType } from '../../domain/note';
-import { usePressObserver } from '../../hooks/usePressObserver';
-import './style.css';
+/* eslint-disable react/prop-types */
+import React, { FunctionComponent, ReactEventHandler } from "react";
+import clsx from "clsx";
+import { NoteType } from "../../domain/note";
+import { usePressObserver } from "../../hooks/usePressObserver";
+import "./style.css";
 
 interface KeyProps {
   type: NoteType;
@@ -12,7 +13,7 @@ interface KeyProps {
   onDown: ReactEventHandler<HTMLButtonElement>;
 }
 
-export const Key: FunctionComponent<KeyProps> = props => {
+export const Key: FunctionComponent<KeyProps> = (props) => {
   const { type, label, onDown, onUp, ...rest } = props;
 
   const pressed = usePressObserver({
@@ -23,7 +24,7 @@ export const Key: FunctionComponent<KeyProps> = props => {
 
   return (
     <button
-      className={clsx(`key key--${type}`, pressed && 'is-pressed')}
+      className={clsx(`key key--${type}`, pressed && "is-pressed")}
       type="button"
       onMouseDown={onDown}
       onMouseUp={onUp}

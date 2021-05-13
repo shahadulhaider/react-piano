@@ -1,7 +1,7 @@
-import React, { FunctionComponent, ChangeEvent } from 'react';
-import { useInstrument } from '../../state/Instrument';
-import { InstrumentName } from 'soundfont-player';
-import { options } from './options';
+import React, { FunctionComponent, ChangeEvent } from "react";
+import { InstrumentName } from "soundfont-player";
+import { useInstrument } from "../../state/Instrument";
+import { options } from "./options";
 
 export const InstrumentSelector: FunctionComponent = () => {
   const { instrument, setInstrument } = useInstrument();

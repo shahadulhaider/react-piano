@@ -1,7 +1,8 @@
-import React, { FunctionComponent, useState } from 'react';
-import { DEFAULT_INSTRUMENT } from '../../domain/sound';
-import { InstrumentContext } from './Context';
+import React, { FunctionComponent, useState } from "react";
+import { DEFAULT_INSTRUMENT } from "../../domain/sound";
+import { InstrumentContext } from "./Context";
 
+// eslint-disable-next-line react/prop-types
 export const InstrumentContextProvider: FunctionComponent = ({ children }) => {
   const [instrument, setInstrument] = useState(DEFAULT_INSTRUMENT);
 

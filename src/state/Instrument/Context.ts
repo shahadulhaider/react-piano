@@ -1,9 +1,10 @@
-import { InstrumentName } from 'soundfont-player';
-import { useContext, createContext } from 'react';
-import { DEFAULT_INSTRUMENT } from '../../domain/sound';
+import { InstrumentName } from "soundfont-player";
+import { useContext, createContext } from "react";
+import { DEFAULT_INSTRUMENT } from "../../domain/sound";
 
 export interface ContextValue {
   instrument: InstrumentName;
+  // eslint-disable-next-line no-unused-vars
   setInstrument: (instrument: InstrumentName) => void;
 }
 

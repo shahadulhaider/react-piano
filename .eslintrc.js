@@ -41,8 +41,6 @@ module.exports = {
   rules: {
     "react/jsx-props-no-spreading": "off",
     "prettier/prettier": "error",
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn",
     "react/jsx-filename-extension": [1, { extensions: [".tsx"] }],
     "import/prefer-default-export": "off",
     "import/extensions": [

@@ -1,8 +1,12 @@
-import { useRef, useState } from 'react';
-import Soundfont, { InstrumentName, Player } from 'soundfont-player';
-import { MidiValue } from '../../domain/note';
-import { AudioNodesRegistry, DEFAULT_INSTRUMENT } from '../../domain/sound';
-import { Optional } from '../../domain/types';
+/* eslint-disable no-shadow */
+/* eslint-disable no-return-await */
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
+import { useRef, useState } from "react";
+import Soundfont, { InstrumentName, Player } from "soundfont-player";
+import { MidiValue } from "../../domain/note";
+import { AudioNodesRegistry, DEFAULT_INSTRUMENT } from "../../domain/sound";
+import { Optional } from "../../domain/types";
 
 interface Settings {
   AudioContext: AudioContextType;
@@ -25,7 +29,7 @@ export function useSoundfont({ AudioContext }: Settings): Adapted {
   const audio = useRef(new AudioContext());
 
   async function resume() {
-    return audio.current.state === 'suspended'
+    return audio.current.state === "suspended"
       ? await audio.current.resume()
       : Promise.resolve();
   }
